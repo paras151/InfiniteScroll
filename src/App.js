@@ -25,12 +25,12 @@ function App() {
   },[]);
 
   const renderListItem = ({title}, key, ref) => {
-    return <div ref={ref} key={key}>{title}</div>
+    return <div className='item' ref={ref} key={key}>{title}</div>
   }
   
   return (
     <>
-      <input value={query} onChange={handleChange}></input>
+      <input className='input' value={query} onChange={handleChange}></input>
       <InfiniteScroll 
         renderListItem={renderListItem} 
         listData={data} 
